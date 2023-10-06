@@ -126,10 +126,10 @@ footer .container {
 
 /*inicio projects*/
 
-/*estilos generico s dela seccion los hago atancando a la section*/
+/*estilos genericos dela seccion los hago atancando a la section*/
 
 main section {
-    padding: var(--space) 1.25rem;
+    padding: calc(var(--space)*4) 1.25rem;
 }
 
 main #projects .grid {
@@ -208,8 +208,57 @@ main .more a {
     border-bottom: 1px solid var(--secondaryColor);
 }
 
-
 /*final projects*/
+
+/*inicio our expertise*/
+
+main #ourexpertise .flex {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space);
+}
+
+main #ourexpertise article {
+    text-align: center;
+}
+
+main #ourexpertise article figure {
+    max-width: 100px;
+    margin: 0 auto;
+}
+
+main #ourexpertise article h3 {
+    font-size: 2rem;
+    padding: var(--space) 0;
+}
+
+main #ourexpertise article p {
+    color: var(--secondaryColor);
+    font-size: 1.25em;
+}
+
+main #ourexpertise article p {
+    color: var(--secondaryColor);
+    font-size: 1.25em;
+}
+
+/*fin our expertise*/
+
+/* inicio price range*/
+
+
+
+
+/* fin price range*/
+
+
+
+
+
+
+
+
+
 
 
 
@@ -259,14 +308,29 @@ main .more a {
         grid-column: 2;
         grid-row: 1 /3;
     }
-}
 
-@media(min-width: 87.5rem) {
-    header .container {
-        padding: 0;
+
+    main #ourexpertise .flex {
+        flex-direction: row;
     }
 
-    footer .container {
-        padding: 0;
+    main #ourexpertise article {
+        text-align: left;
+    }
+
+    main #ourexpertise article figure {
+        max-width: 100px;
+        margin: 0;
+    }
+
+
+    @media(min-width: 87.5rem) {
+        header .container {
+            padding: 0;
+        }
+
+        footer .container {
+            padding: 0;
+        }
     }
 }
