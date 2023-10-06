@@ -150,24 +150,27 @@ main #projects .grid article {
 }
 
 main #projects .grid article:first-child {
-    background-image: url(../images/vase-wooden.jpg);
+    background-image: url('../images/vase-wooden.jpg');
     background-size: cover;
-    background-position: center;
-    height: 50vh;
+    background-position: center center;
+    height: 45vh;
     overflow: hidden;
 
 }
 
 main #projects .grid article:last-child {
-    background-image: url(../images/coo-coo-clock.png);
+    background-image: url('../images/coo-coo-clock.png');
     background-size: cover;
-    background-position: center;
+    background-position: center center;
+    overflow: hidden;
+    /*mascara de recorte*/
 }
 
 main #projects .grid article:nth-child(2) {
-    background-image: url(../images/bottle-gradient-2.jpg);
+    background-image: url('../images/bottle-gradient-2.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: center center;
+    overflow: hidden;
 }
 
 main #projects .grid article {
@@ -177,25 +180,33 @@ main #projects .grid article {
 main #projects .grid article h3 {
     position: absolute;
     bottom: 1.25rem;
-    left: 0.80rem;
+    left: 0.60rem;
     font-size: 2rem;
     font-weight: 500;
     transition: 1s;
     opacity: 0;
 }
 
-main #projects .grid article h3 {
+main #projects .grid article:hover h3 {
     left: 1.25rem;
     opacity: 1;
 }
 
-main {
-    font-size: 3em;
+main section h2 {
+    font-size: 2em;
     padding-bottom: 2.5rem;
+    text-align: center;
 }
 
-
-
+main .more a {
+    color: var(--secondaryColor);
+    display: inline-block;
+    padding: 0.20rem 0rem;
+    text-decoration: none;
+    font-size: 1.5em;
+    margin-top: calc(var(--space)*3);
+    border-bottom: 1px solid var(--secondaryColor);
+}
 
 
 /*final projects*/
