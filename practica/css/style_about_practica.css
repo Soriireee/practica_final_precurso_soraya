@@ -1,0 +1,283 @@
+@import url(reset_about_practica.css);
+@import url('https://fonts.googleapis.com/css2?family=Rasa:wght@300;500&display=swap');
+
+:root {
+    --font: 'Rasa', serif;
+    --mainColor: #414141;
+    --secondaryColor: #c9c9c9;
+    --maxWidth: 87.5rem;
+    --space: 1.25rem;
+    --colorButton: #eeeeee;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: grayscale(100%);
+    transition: 1s;
+}
+
+img:hover {
+    filter: grayscale(0%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: var(--maxWidth);
+    margin: 0 auto;
+}
+
+body {
+    font-family: var(--font);
+    font-weight: 300;
+    color: var(--mainColor);
+    font-size: 1em;
+}
+
+/*inicio del header*/
+
+header {
+    padding-top: 2em;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+header nav .menu {
+    padding: calc(var(--space) * 2) 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 1.75em;
+    padding: 0rem 1.25rem;
+}
+
+header nav.container>a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--mainColor);
+    width: 50%;
+}
+
+header nav.container #btnMenu {
+    width: 50%;
+    text-align: right;
+}
+
+header nav.container .menu {
+    width: 100%;
+}
+
+header nav.container .menu li {
+    text-align: center;
+}
+
+header nav.container .menu a {
+    display: inline-block;
+    padding: 0.625rem 0rem;
+    text-decoration: none;
+    color: var(--mainColor);
+}
+
+header nav.container .menu .active {
+    font-weight: 500;
+}
+
+/*fin header*/
+
+
+/*inicio del imagenes*/
+
+main section h2 {
+    font-size: 2em;
+    padding-bottom: 2.5rem;
+    text-align: center;
+}
+
+main #team .flex {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space);
+}
+
+main #team article {
+    text-align: center;
+}
+
+main #team article figure {
+    max-width: 100px;
+    margin: 0 auto;
+
+}
+
+main #team article p {
+    color: var(--secondaryColor);
+    font-size: 0.75em;
+    margin-bottom: 20px;
+}
+
+main #team article h5 {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+main #team div.text {
+    background-color: #f4f4f4;
+    color: black;
+    padding: 3em;
+    margin-top: 2em;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.4em;
+
+}
+
+main #team .giro figure {
+    transform: rotate(45deg) scale(0.75);
+    overflow: hidden;
+    transition: 1s;
+}
+
+main #team .giro figure img {
+    transform: rotate(-45deg) scale(1.75);
+    transition: 1s;
+}
+
+main #team .giro:hover :is(figure, img) {
+    transform: rotate(0deg);
+}
+
+/*fin imagenes*/
+
+/* inicio icons*/
+
+main section {
+    padding: calc(var(--space)*3) 1.25rem
+}
+
+main #ourexpertise .flex {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space);
+}
+
+main #ourexpertise article {
+    text-align: center;
+}
+
+main #ourexpertise article figure {
+    max-width: 100px;
+    margin: 0 auto;
+}
+
+main #ourexpertise article h3 {
+    font-size: 1.5rem;
+}
+
+main #ourexpertise article p {
+    color: var(--secondaryColor);
+    font-size: 1em;
+}
+
+
+/*fin icons*/
+
+/*inicio del FINAL*/
+#final h3 {
+    font-size: 2rem;
+    text-align: center;
+    padding: calc(var(--space)*1.5) 1.25rem
+}
+
+.way {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.way>div {
+    width: 15%;
+    border-bottom: 3px solid var(--mainColor);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+main #final h5 {
+    font-size: 1.75rem;
+    text-align: center;
+    margin-bottom: 1.25rem;
+}
+
+#final p {
+    font-size: 1.20rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+
+
+/*fin del FINAL*/
+
+
+
+
+
+
+
+
+
+
+
+/* mediaqueries */
+
+@media(min-width: 48rem) {
+    header nav.container #btnMenu {
+        display: none;
+    }
+
+    header nav.container .menu {
+        width: 80%;
+        order: 1;
+    }
+
+    header nav.container>a {
+        width: 20%;
+        order: 2;
+        /* order es un regla de flex */
+        text-align: right;
+    }
+
+    header nav.container .menu li {
+        text-align: left;
+        display: inline-block;
+    }
+
+    header nav .menu {
+        padding: 0;
+    }
+
+    header nav.container .menu a {
+        padding: 0rem calc(var(--space)*1.25) 0 0;
+    }
+
+
+
+    @media(min-width: 87.5rem) {
+        header .container {
+            padding: 0;
+        }
+    }
+}
